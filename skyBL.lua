@@ -57,3 +57,4 @@ function functionstore:skyboxcreator(choice)
 end
 
 -- skyboxcreator("Waves")
+return functionstore
