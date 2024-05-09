@@ -37,7 +37,9 @@ local skyboxesnames = {
 local functionstore = {}
 
 function functionstore:printnames()
-  print(1, #skyboxesnames)
+    if skyboxesnames then 
+        print(1, #skyboxesnames)
+    end
 end
 
 function functionstore:skyboxcreator(choice)
