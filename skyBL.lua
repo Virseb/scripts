@@ -56,7 +56,7 @@ function functionstore:skyboxcreator(choice)
 
     game.Lighting:ClearAllChildren()
     wait()
-    _G[choice]()
+    self[skyboxes[choice]]()
 end
 
 return functionstore
