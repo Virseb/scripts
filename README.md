@@ -7,9 +7,9 @@ use this in your script
 ``` lua
 local skyboxmaker = loadstring(game:HttpGet("https://github.com/Virseb/scripts/blob/main/skyBL.lua?raw=true"))()
 
-script:printnames() -- it prints the names of the choices you have
+skyboxmaker:printnames() -- it prints the names of the choices you have
 
-YourScriptName:skyboxcreator(choice) -- replace choice with ex: Waves
+skyboxmaker:skyboxcreator(choice) -- replace choice with ex: 1,2,3
 
 ```
 # if you cannot require it 
