@@ -5,7 +5,7 @@
 use this in your script
 
 ``` lua
-local skyboxmaker = loadstring(game:HttpGet("..."))()
+local skyboxmaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/Virseb/scripts/main/skyBL.lua"))()
 
 script.printnames() -- it prints the names of the choices you have
 
