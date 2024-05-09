@@ -1,7 +1,7 @@
 -- mxxme1 on discord, skyboxes script
 -- mwa ;)
 
-local skyboxes = {
+local skyboxesnames = {
     ["PURPLE"] = function()
         local sky = Instance.new("Sky")
         sky.Parent = game.Lighting
