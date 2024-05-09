@@ -1,5 +1,6 @@
 -- mxxme1 on discord, skyboxes script
 -- mwa ;)
+local functionstore = {}
 
 local skyboxesnames = {
     ["PURPLE"] = function()
@@ -34,7 +35,7 @@ local skyboxesnames = {
     end
 }
      
-local functionstore = {}
+
 
 function functionstore:printnames()
     print("Available skyboxes:")
