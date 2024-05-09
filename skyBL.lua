@@ -3,31 +3,34 @@
 
 local skyboxesnames = {
     Purple = function()
-       local skybox = Instance.new("Skybox")
-        skybox.ImageAbove = "id" 
-        skybox.DownImage = "id" 
-        skybox.LeftImage = "id"
-        skybox.RightImage = "id" 
-        skybox.BackImage = "id" 
-        skybox.FrontImage = "id"
+       local sky = Instance.new("Sky")
+      sky.Parent = game.Lighting
+        sky.SkyboxBk = "id" 
+        sky.SkyboxDn = "id" 
+        sky.SkyboxLf = "id"
+        sky.SkyboxRt = "id" 
+        sky.SkyboxBk = "id" 
+        sky.SkyboxFt = "id"
     end,
     Blue = function()
-        local skybox = Instance.new("Skybox")
-        skybox.ImageAbove = "id" 
-        skybox.DownImage = "id" 
-        skybox.LeftImage = "id"
-        skybox.RightImage = "id" 
-        skybox.BackImage = "id" 
-        skybox.FrontImage = "id"
+        local sky = Instance.new("Sky")
+      sky.Parent = game.Lighting
+        sky.SkyboxBk = "id" 
+        sky.SkyboxDn = "id" 
+        sky.SkyboxLf = "id"
+        sky.SkyboxRt = "id" 
+        sky.SkyboxBk = "id" 
+        sky.SkyboxFt = "id"
     end,
     Waves = function()
-        local skybox = Instance.new("Skybox")
-        skybox.ImageAbove = "7182865887" 
-        skybox.DownImage = "7182865887" 
-        skybox.LeftImage = "7182865887"
-        skybox.RightImage = "7182865887"
-        skybox.BackImage = "7182865887"
-        skybox.FrontImage = "7182865887"
+        local sky = Instance.new("Sky")
+      sky.Parent = game.Lighting
+        sky.SkyboxBk = "7182865887" 
+        sky.SkyboxDn = "7182865887" 
+        sky.SkyboxLf = "7182865887"
+        sky.SkyboxRt = "7182865887"
+        sky.SkyboxBk = "7182865887"
+        sky.SkyboxFt = "7182865887"
     end
 }
 
@@ -35,34 +38,21 @@ function printnames()
   print(1, #skyboxesnames)
 end
 
-
-
 function skyboxcreator(choice)
-  local created = function()
-  if game.ReplicatedStorage.Bgyfaftpouppoob then
-    return true
-  end
-end
-  
-  if created and choice == 1 and #skyboxesnames then
+    if not choice or not skyboxesnames[choice] then
+        return warn("Error: Invalid choice")
+    end
+    
+    local created = game.ReplicatedStorage:FindFirstChild("Bgyfaftpouppoob")
+    if not created then
+        created = Instance.new("Folder")
+        created.Name = "Bgyfaftpouppoob"
+        created.Parent = game.ReplicatedStorage
+    end
+
     game.Lighting:ClearAllChildren()
     task.wait()
-    skyboxesnames[tostring(choice)]()
-    task.wait()
-    local Yeslol = Instance.new("Folder")
-    Yeslol.Parent = game.ReplicatedStorage
-    Yeslol.Name = "Bgyfaftpouppoob"
-    
-  elseif not created and choice == 1 and #skyboxesnames then
-    game.Lighting:ClearAllChildren()
-    task.wait()
-    skyboxesnames[tostring(choice)]()
-    task.wait()
-    local Yeslol = Instance.new("Folder")
-    Yeslol.Parent = game.ReplicatedStorage
-    Yeslol.Name = "Bgyfaftpouppoob"
-    
-  else
-    return warn("Error, no choice")
-  end
+    skyboxesnames[choice]()
 end
+
+skyboxcreator("Waves")
