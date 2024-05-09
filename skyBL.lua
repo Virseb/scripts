@@ -1,38 +1,39 @@
 -- mxxme1 on discord, skyboxes script
 -- mwa ;)
 
-local skyboxesnames = {
-    Purple = function()
-       local sky = Instance.new("Sky")
-      sky.Parent = game.Lighting
-        sky.SkyboxBk = "id" 
-        sky.SkyboxDn = "id" 
-        sky.SkyboxLf = "id"
-        sky.SkyboxRt = "id" 
-        sky.SkyboxBk = "id" 
-        sky.SkyboxFt = "id"
-    end,
-    Blue = function()
+local skyboxes = {
+    ["PURPLE"] = function()
         local sky = Instance.new("Sky")
-      sky.Parent = game.Lighting
-        sky.SkyboxBk = "id" 
-        sky.SkyboxDn = "id" 
-        sky.SkyboxLf = "id"
-        sky.SkyboxRt = "id" 
-        sky.SkyboxBk = "id" 
-        sky.SkyboxFt = "id"
+        sky.Parent = game.Lighting
+        sky.SkyboxBk = "rbxassetid://id" 
+        sky.SkyboxDn = "rbxassetid://id" 
+        sky.SkyboxLf = "rbxassetid://id"
+        sky.SkyboxRt = "rbxassetid://id" 
+        sky.SkyboxUp = "rbxassetid://id" 
+        sky.SkyboxFt = "rbxassetid://id"
     end,
-    Waves = function()
+    ["BLUE"] = function()
         local sky = Instance.new("Sky")
-      sky.Parent = game.Lighting
-        sky.SkyboxBk = "7182865887" 
-        sky.SkyboxDn = "7182865887" 
-        sky.SkyboxLf = "7182865887"
-        sky.SkyboxRt = "7182865887"
-        sky.SkyboxBk = "7182865887"
-        sky.SkyboxFt = "7182865887"
+        sky.Parent = game.Lighting
+        sky.SkyboxBk = "rbxassetid://id" 
+        sky.SkyboxDn = "rbxassetid://id" 
+        sky.SkyboxLf = "rbxassetid://id"
+        sky.SkyboxRt = "rbxassetid://id" 
+        sky.SkyboxUp = "rbxassetid://id" 
+        sky.SkyboxFt = "rbxassetid://id"
+    end,
+    ["WAVES"] = function()
+        local sky = Instance.new("Sky")
+        sky.Parent = game.Lighting
+        sky.SkyboxBk = "rbxassetid://7182865887" 
+        sky.SkyboxDn = "rbxassetid://7182865887" 
+        sky.SkyboxLf = "rbxassetid://7182865887"
+        sky.SkyboxRt = "rbxassetid://7182865887"
+        sky.SkyboxUp = "rbxassetid://7182865887"
+        sky.SkyboxFt = "rbxassetid://7182865887"
     end
 }
+     
 local functionstore = {}
 
 function functionstore:printnames()
