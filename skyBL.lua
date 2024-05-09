@@ -35,13 +35,15 @@ function printnames()
   print(1, #skyboxesnames)
 end
 
-local created = function()
+
+
+function skyboxcreator(choice)
+  local created = function()
   if game.ReplicatedStorage.Bgyfaftpouppoob then
     return true
   end
 end
-
-function skyboxcreator(choice)
+  
   if created and choice == 1 and #skyboxesnames then
     game.Lighting:ClearAllChildren()
     task.wait()
