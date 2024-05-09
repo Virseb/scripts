@@ -2,8 +2,7 @@
 -- mwa ;)
 local functionstore = {}
 
-local skyboxesnames = {
-    ["PURPLE"] = function()
+    local purple = function()
         local sky = Instance.new("Sky")
         sky.Parent = game.Lighting
         sky.SkyboxBk = "rbxassetid://id" 
@@ -12,8 +11,8 @@ local skyboxesnames = {
         sky.SkyboxRt = "rbxassetid://id" 
         sky.SkyboxUp = "rbxassetid://id" 
         sky.SkyboxFt = "rbxassetid://id"
-    end,
-    ["BLUE"] = function()
+    end
+    local blue = function()
         local sky = Instance.new("Sky")
         sky.Parent = game.Lighting
         sky.SkyboxBk = "rbxassetid://id" 
@@ -22,8 +21,8 @@ local skyboxesnames = {
         sky.SkyboxRt = "rbxassetid://id" 
         sky.SkyboxUp = "rbxassetid://id" 
         sky.SkyboxFt = "rbxassetid://id"
-    end,
-    ["WAVES"] = function()
+    end
+    local waves = function()
         local sky = Instance.new("Sky")
         sky.Parent = game.Lighting
         sky.SkyboxBk = "rbxassetid://7182865887" 
@@ -33,8 +32,8 @@ local skyboxesnames = {
         sky.SkyboxUp = "rbxassetid://7182865887"
         sky.SkyboxFt = "rbxassetid://7182865887"
     end
-}
-     
+
+     local skyboxes = {"purple","blue","waves"}
 
 
 function functionstore:printnames()
@@ -57,7 +56,7 @@ function functionstore:skyboxcreator(choice)
 
     game.Lighting:ClearAllChildren()
     task.wait()
-    skyboxes[choice]()
+    choice()
 end
 -- skyboxcreator("Waves")
 return functionstore
