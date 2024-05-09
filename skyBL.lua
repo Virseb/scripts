@@ -37,13 +37,13 @@ local skyboxesnames = {
 local functionstore = {}
 
 function functionstore:printnames()
-    if skyboxesnames then 
-        print(1, #skyboxesnames)
+    print("Available skyboxes:")
+    for name, _ in pairs(skyboxes) do
+        print(name)
     end
 end
-
 function functionstore:skyboxcreator(choice)
-    if not choice or not skyboxesnames[choice] then
+    if not choice or not skyboxes[choice] then
         return warn("Error: Invalid choice")
     end
     
@@ -56,8 +56,7 @@ function functionstore:skyboxcreator(choice)
 
     game.Lighting:ClearAllChildren()
     task.wait()
-    skyboxesnames[choice]()
+    skyboxes[choice]()
 end
-
 -- skyboxcreator("Waves")
 return functionstore
