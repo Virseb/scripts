@@ -43,7 +43,7 @@ function functionstore:printnames()
 end
 
 function functionstore:skyboxcreator(choice)
-    if not choice or not skyboxes[choice] then
+    if not choice then
         return warn("Error: Invalid choice")
     end
     
@@ -56,7 +56,16 @@ function functionstore:skyboxcreator(choice)
 
     game.Lighting:ClearAllChildren()
     wait()
-    self[skyboxes[choice]]()
+
+    if choice == 1 then
+        purple()
+    elseif choice == 2 then
+        blue()
+    elseif choice == 3 then
+        waves()
+    else
+        warn("Error: Invalid choice")
+    end
 end
 
 return functionstore
