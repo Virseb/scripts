@@ -33,12 +33,13 @@ local skyboxesnames = {
         sky.SkyboxFt = "7182865887"
     end
 }
+local functionstore = {}
 
-function printnames()
+function functionstore:printnames()
   print(1, #skyboxesnames)
 end
 
-function skyboxcreator(choice)
+function functionstore:skyboxcreator(choice)
     if not choice or not skyboxesnames[choice] then
         return warn("Error: Invalid choice")
     end
