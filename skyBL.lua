@@ -55,4 +55,4 @@ function skyboxcreator(choice)
     skyboxesnames[choice]()
 end
 
-skyboxcreator("Waves")
+-- skyboxcreator("Waves")
